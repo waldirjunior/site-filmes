@@ -9,7 +9,7 @@ api_url_base = 'https://api.themoviedb.org/3/search/movie?'
 headers = {'Content-Type': 'application/json', 'Authorization': 'Bearer{0}'.format(api_token)}
 
 #Solução encontada para mostrar busca da API
-@app.route('/filmes/<nome_do_filme>')
+@app.route('/api/culturapop/filmes/busca/<nome_do_filme>')
 def filmes(nome_do_filme):
     api_url = f'{api_url_base}api_key={api_token}&language=pt-BR&query={nome_do_filme}&page=1&include_adult=false'
     
