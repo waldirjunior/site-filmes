@@ -2,7 +2,13 @@ from flask import Flask, request
 import json
 import requests
 
+#Controllers
+from controllers.buscas import buscas
+
+
 app = Flask(__name__)
+
+app.register_blueprint(buscas)
 
 api_token = 'c158b2f342a0f004be2bf12d2a039b42'
 api_url_base = 'https://api.themoviedb.org/3/search/movie?'
